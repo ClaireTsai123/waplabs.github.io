@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div {
+            /*border: 1px solid black;*/
+            position: relative;
+            width: 600px;
+            height: 750px;
+        }
+
+        #div1 {
+            position: relative;
+            left: 20px;
+        }
+
+        .div2 {
+            position: relative;
+            left: 20px;
+            top: 20px;
+            width: 560px;
+
+            /*right: px;*/
+        }
+
+        .table {
+            /*margin: 25px;*/
+            width: 100%;
+            /*position: absolute;*/
+        }
+
+        #div3 {
+            position: relative;
+        }
+
+        #pbutton {
+            position: relative;
+            left: 500px;
+            top: 30px;
+        }
+
+        table, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        /*h4 {*/
+        /*    !*margin: 25px;*!*/
+        /*}*/
+        #button {
+            position: relative;
+            left: 300px;
+            /*bottom:10px;*/
+        }
+
+        #wel {
+            position: relative;
+            left: 150px;
+            /*bottom: 10px;*/
+        }
+
+        #logo {
+            position: relative;
+            left: 45px;
+            /*bottom: 2px;*/
+        }
+
+        #td {
+            padding-left: 20px;
+            padding-right: 20px;
+            text-align: right;
+        }
+
+        td > input {
+            width: 50px;
+            height: 15px;
+        }
+    </style>
+</head>
+
+<body>
+<div id="div">
+    <div id="div1"><span id="logo"><img src="./logo.png" alt="" width="60"/></span>
+        <span id="wel">Welcome,Xianhong</span>
+        <span id="button"><button>Log out</button></span>
+    </div>
+    <div class="div2">
+        <h4>Product List</h4>
+        <table class="table">
+            <tr class="t">
+                <td>Name</td>
+                <td>Price</td>
+                <td>Stock</td>
+                <td>Actions</td>
+            </tr>
+            <tr class="t">
+                <td>Node.js</td>
+                <td>9.99</td>
+                <td>8</td>
+                <td><img src="./Shopping-cart-logo.jpeg" alt="shopping cart" width="50"></td>
+            </tr>
+            <tr class="t">
+                <td>React</td>
+                <td>19.99</td>
+                <td>5</td>
+                <td><img src="./Shopping-cart-logo.jpeg" alt="shopping cart" width="50"></td>
+            </tr>
+            <tr class="t">
+                <td>Angular</td>
+                <td>29.99</td>
+                <td>13</td>
+                <td><img src="./Shopping-cart-logo.jpeg" alt="shopping cart" width="50"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="div2">
+        <h4>Your Shopping cart</h4>
+        <table class='table'>
+            <tr class="t">
+                <td>Name</td>
+                <td>Price</td>
+                <td>Total</td>
+                <td>Quantity</td>
+            </tr>
+            <tr class="t">
+                <td>Node.js</td>
+                <td>9.99</td>
+                <td>9.99</td>
+                <td>-<input type="text">+
+                </td>
+            </tr>
+            <tr class="t">
+                <td>Angular</td>
+                <td>29.99</td>
+                <td>290.99</td>
+                <td>
+                    -<input type="text">+
+                </td>
+            </tr>
+            <tr>
+                <td id="td" colspan="4">Total: 300.98</td>
+            </tr>
+        </table>
+    </div>
+    <div id="div3">
+        <button id="pbutton">Place Order</button>
+    </div>
+</div>
+</body>
+</html>
