@@ -6,8 +6,6 @@
     <style>
         #form {
             border: 1px solid black;
-            width: 800px;
-            height: 500px;
             position: relative;
         }
 
@@ -30,7 +28,7 @@
         }
 
         #button {
-            margin-left: 350px;
+            margin-left: 50%;
         }
 
         table {
@@ -40,33 +38,38 @@
 
         td {
             padding-top: 10px;
-            /*text-align: left;*/
+            padding-bottom: 10px;
             vertical-align: top;
 
         }
 
         header {
             background-color: cadetblue;
-            position:relative;
+            position: relative;
         }
+
         header select {
             background-color: cadetblue;
             border-style: none;
             position: relative;
-            left:20px;
+            left: 30px;
         }
+
         #address {
-            height: 100px;
+            height: 150px;
         }
+
         input[type=text] {
-            width: 180px;
+            width: 200px;
         }
+
         .td {
             font-weight: bold;
         }
 
-        #table {
-            margin-left: 30px;
+        #divs1, #divs2 {
+            width: 50%;
+
         }
 
         #div {
@@ -81,7 +84,7 @@
         footer {
             background-color: gray;
             position: relative;
-            top:16px;
+
         }
     </style>
 </head>
@@ -98,7 +101,7 @@
 
     <div class="div"><p><a href="#">Register now while seats are available!</a></p></div>
     <div class="div" id="div">
-        <div>
+        <div id="divs1">
             <table>
                 <tr>
                     <td class="td">First Name<span>*</span></td>
@@ -150,7 +153,7 @@
                 </tr>
             </table>
         </div>
-        <div id="table">
+        <div id="divs2">
             <p><a href="#">Lunch</a></p>
             <table>
                 <tr>
@@ -193,7 +196,6 @@
         <div id="button" class="div"><input type="submit"/> <input type="reset"/></div>
 
     </footer>
-
 </form>
 </body>
 </html>
