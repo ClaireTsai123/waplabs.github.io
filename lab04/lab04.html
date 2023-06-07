@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #form {
+            border: 1px solid black;
+            position: relative;
+        }
+
+        span {
+            color: red;
+        }
+
+        input[type=checkbox] {
+            vertical-align: middle;
+            position: relative;
+            bottom: 1px;
+        }
+
+        label {
+            display: block;
+        }
+
+        input[type=submit], input[type=reset] {
+            background-color: cadetblue;
+        }
+
+        #button {
+            margin-left: 50%;
+        }
+
+        table {
+            width: 100%;
+
+        }
+
+        td {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            vertical-align: top;
+
+        }
+
+        header {
+            background-color: cadetblue;
+            position: relative;
+        }
+
+        header select {
+            background-color: cadetblue;
+            border-style: none;
+            position: relative;
+            left: 30px;
+        }
+
+        #address {
+            height: 150px;
+        }
+
+        input[type=text] {
+            width: 200px;
+        }
+
+        .td {
+            font-weight: bold;
+        }
+
+        #divs1, #divs2 {
+            width: 50%;
+
+        }
+
+        #div {
+            display: flex;
+        }
+
+        .div {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        footer {
+            background-color: gray;
+            position: relative;
+
+        }
+    </style>
+</head>
+
+<body>
+<form id="form">
+    <header>
+        <div class="div">Workshop Registration
+            <select>
+                <option selected>More Actions</option>
+            </select>
+        </div>
+    </header>
+
+    <div class="div"><p><a href="#">Register now while seats are available!</a></p></div>
+    <div class="div" id="div">
+        <div id="divs1">
+            <table>
+                <tr>
+                    <td class="td">First Name<span>*</span></td>
+                    <td><input id="fn" type="text" name="first name"/></td>
+                </tr>
+                <tr>
+                    <td class="td">Last Name<span>*</span></td>
+                    <td><input id="ln" type="text" name="last name"/></td>
+                </tr>
+                <tr>
+                    <td class="td">Company/Insitution<span>*</span></td>
+                    <td><input type="text" name="Company/Insitution"/></td>
+                </tr>
+                <tr>
+                    <td class="td">Address<span>*</span></td>
+                    <td><input id="address" type="text" name="address"/></td>
+                </tr>
+                <tr>
+                    <td class="td">City</td>
+                    <td><input type="text" name="city"/></td>
+                </tr>
+                <tr>
+                    <td class="td">State/Province/Region</td>
+                    <td>
+                        <select>
+                            <option selected>-Select-</option>
+                            <option></option>
+                            <option></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td">Country</td>
+                    <td>
+                        <select>
+                            <option selected>-Select-</option>
+                            <option></option>
+                            <option></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td">Email<span>*</span></td>
+                    <td><input type="text" name="email"/></td>
+                </tr>
+                <tr>
+                    <td class="td">Phone Number<span>*</span></td>
+                    <td><input type="text" name="phone number"/></td>
+                </tr>
+            </table>
+        </div>
+        <div id="divs2">
+            <p><a href="#">Lunch</a></p>
+            <table>
+                <tr>
+                    <td class="td">Meal Preference</td>
+                    <td>
+                        <select>
+                            <option selected>Vegetarian</option>
+                            <option></option>
+                            <option></option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <p><a href="#">Payment Details</a></p>
+            <table>
+                <tr>
+                    <td class="td">Payment Mode</td>
+                    <td>
+                        <label><input type="checkbox" name="cash"/>Cash</label>
+                        <label><input type="checkbox" name="cheque"/>Cheque</label>
+                        <label><input type="checkbox" name="demand draft"/>Demand Draft</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td">DD/Cheque No.</td>
+                    <td><input type="text" name="DD/Cheque No."/></td>
+                </tr>
+                <tr>
+                    <td class="td">Drawn On(Bank Name)</td>
+                    <td><input type="text" name="bank name"/></td>
+                </tr>
+                <tr>
+                    <td class="td">Payable at</td>
+                    <td><input type="text" name="payable at"/></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <footer>
+        <div id="button" class="div"><input type="submit"/> <input type="reset"/></div>
+
+    </footer>
+</form>
+</body>
+</html>

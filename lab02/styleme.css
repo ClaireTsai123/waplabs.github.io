@@ -1,0 +1,18 @@
+
+.movie {
+    list-style-type: decimal;
+}
+.font-color {
+    font-style: italic;
+    color: yellowgreen;
+}
+
+h1 {
+    font-family: "Arial Black";
+    color: blue;
+    background-color: red;
+}
+h3 {
+    font-family: "Arial Black";
+    color: blue;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    function askPassword(ok, fail) {
+      let password = prompt('Password?', '');
+      if (password == 'rockstar') {
+        ok()
+      } else {
+        fail();
+      }
+    }
+    let user ={
+      name: 'John',
+      loginOk() {
+        alert(`${this.name} logged in`);
+      },
+      loginFail() {
+        alert(`${this.name} failed to log in`);
+      },
+    };
+    // askPassword(user.loginOk, user.loginFail);//
+    askPassword(user.loginOk.bind(user), user.loginFail.bind(user));//fix with bind
+    askPassword(() => user.loginOk(), () => user.loginFail()); // fix with wrapper
+    const f1 = function(){
+        user.loginOk.call(user)
+    }
+    const f2 = function(){
+        user.loginFail.call(user)
+    }
+    askPassword(f1,f2) // fix with call
+
+    const fun1 = function(){
+        user.loginOk.apply(user)
+    }
+    const fun2 = function(){
+        user.loginFail.apply(user)
+    }
+    askPassword(fun1,fun2);// fix with apply
+
+    // let res1 = user.loginOk.apply(user);
+    // let res2 = user.loginFail.apply(user);
+    // askPassword(res1, res2);
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
