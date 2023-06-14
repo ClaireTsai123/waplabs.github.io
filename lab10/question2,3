@@ -1,0 +1,17 @@
+question2:
+1. Explain why do we want sometimes to use setImmediate instead of using setTimeout?
+setTimeout: schedules a callback to run after a specific time, the functions are registered in
+the timer phase of the event loop.
+setImmediate: schedules a callback to run at check phase of the event loop after I/O events' callbacks.
+if we have a case that we hava a Node.js server that need to process a large amount of data received from a client.
+and we should ensure that server remains responsive and doesn't block other incoming requests while processing
+this data. in this case, we will use setImmediate.
+
+2.Explain the difference between process.nextTick and setImmediate?
+ process.nextTick allows for immediate execution of callbacks, with higher priority and potential recursive deferral,
+the nexttick queue is completely drained on each pass of the event loop before additioanl I/O is processed. as a result,
+recursively setting nextTick callbacks will block any I/O from happening,just like a while(true)loop.
+ while"setImmediate" schedules callbacks to be executed in the next iteration of the event loop,after I/O events'callbacks
+
+3.Does Node.js has window object?
+No.
